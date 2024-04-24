@@ -8,6 +8,8 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+   
+    width: auto;
 }
 html{
     scroll-behavior: smooth;
@@ -245,7 +247,6 @@ section .title::after{
 .about .about-content .left img{
     height: 400px;
     width: 400px;
-    object-fit: cover;
     border-radius: 6px;
 }
 .about .about-content .right{
@@ -295,6 +296,7 @@ section .title::after{
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
+    margin: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -391,45 +393,46 @@ section .title::after{
 
 /* teams section styling */
 
-.teams{
+.swiper{
     width: 100%;
 }
 
-.teams .max-width{
+.swiper .max-width{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.teams .carousel .card{
+.swiper .carousel .card{
     width: calc(100% - 20px);
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
+    height: 500px;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.swiper .carousel .card:hover{
     background: crimson;
 }
-.teams .carousel .card .box{
+.swiper .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.swiper .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.swiper .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.swiper .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -437,16 +440,22 @@ section .title::after{
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.swiper .carousel .card:hover img{
     border-color: #fff;
 }
 
-.teams a {
+.swiper a {
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 }
+
+.swiper-button-next,
+.swiper-button-prev{
+    width: 100px;
+}
+
 .owl-dots{
     text-align: center;
     margin-top: 20px;
@@ -500,6 +509,7 @@ section .title::after{
 }
 .contact .contact-content .info .sub-title{
     color: #333;
+    font-size: 13px;
 }
 .contact .right form .fields{
     display: flex;
@@ -640,6 +650,10 @@ footer span a:hover{
         justify-content: center;
         margin: 0 auto 60px;
     }
+     .about .about-content .left img{
+        width: 100%;
+        height: 100%;
+    }
     .about .about-content .right{
         flex: 100%;
     }
@@ -702,3 +716,4 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+
