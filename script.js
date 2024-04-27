@@ -35,17 +35,27 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Fullstack Developer", "Problem Solving ", "Ai Tools", ],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
+        strings: [
+            "Fullstack Developer",
+            "Software Developer",
+            "Problem Solving ",
+            "Ai Tools",
+          ],
+          typeSpeed: 100,
+          backSpeed: 60,
+          loop: true,
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Fullstack Developer", "Problem Solver ", ],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
+       strings: [
+            "Fullstack Developer",
+            "Software Developer",
+            "Problem Solving ",
+            "Ai Tools",
+          ],
+          typeSpeed: 100,
+          backSpeed: 60,
+          loop: true
     });
 
     // owl carousel script
@@ -74,3 +84,4 @@ $(document).ready(function(){
         
     });
 });
+

@@ -17,20 +17,44 @@ html{
     color: white;
 }
 
+
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
-    width: 10px;
+    position: fixed;
+    height: 1px;
+    width: 8px;
+    background: #ffffff;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 4px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 3px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    
 }
+  
+  .scroll-up-btn:hover {
+    filter: brightness(90%);
+  }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    bottom: 3px;
+    opacity: 1;
+    pointer-events: auto;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background-image:linear-gradient(to bottom,rgb(255, 162, 0),rgb(255, 255, 255),rgb(83, 251, 86));;
+    filter: brightness(100%);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+
 
 /* all similar content styling codes */
 section{
