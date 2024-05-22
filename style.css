@@ -432,7 +432,7 @@ section .title::after{
     width: calc(100% - 20px);
     background: #222;
     border-radius: 6px;
-    padding: 25px 35px;
+    padding: 5px 5px;
     text-align: center;
     overflow: hidden;
     height: 500px;
@@ -457,8 +457,8 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 .swiper .carousel .card img{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid crimson;
