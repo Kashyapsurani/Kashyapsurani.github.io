@@ -449,7 +449,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .swiper .carousel .card:hover .box{
-    transform: scale(1.05);
+    transform: scale(1.010);
 }
 .swiper .carousel .card .text{
     font-size: 25px;
