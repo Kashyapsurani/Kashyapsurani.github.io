@@ -166,7 +166,7 @@ section .title::after {
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
     background-color: #111;
-    
+
 }
 
 .navbar.sticky {
@@ -547,14 +547,14 @@ section .title::after {
 }
 
 .skills-content .right .css::before {
-    width:90%;
+    width: 90%;
 }
 
 .skills-content .right .js::before {
     width: 85%;
 }
 
-.skills-content .right .Bootstrap::before {
+.skills-content .right .bootstrap::before {
     width: 95%;
 }
 
