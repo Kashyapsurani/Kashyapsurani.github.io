@@ -16,7 +16,32 @@ html {
     color: white;
 }
 
+/* Base cursor style */
+body {
+    cursor: url('path/to/your/cursor.png'), auto;
+}
 
+/* Custom cursor for specific elements */
+.cursor {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    background-color: #000;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: all 0.1s ease;
+}
+
+/* Cursor effect when hovering over buttons or interactive elements */
+button:hover,
+.menu-btn:hover,
+.scroll-up-btn:hover,
+.owl-carousel .item:hover {
+    transform: scale(1.5);
+    transition: all 0.1s ease;
+}
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -518,24 +543,41 @@ section .title::after {
 }
 
 .skills-content .right .html::before {
-    width: 90%;
+    width: 100%;
 }
 
 .skills-content .right .css::before {
-    width: 60%;
+    width:90%;
 }
 
 .skills-content .right .js::before {
+    width: 85%;
+}
+
+.skills-content .right .Bootstrap::before {
+    width: 95%;
+}
+
+.skills-content .right .jQuery::before {
     width: 80%;
 }
 
-.skills-content .right .php::before {
-    width: 50%;
+.skills-content .right .React::before {
+    width: 85%;
 }
 
-.skills-content .right .mysql::before {
-    width: 70%;
+.skills-content .right .Node::before {
+    width: 75%;
 }
+
+.skills-content .right .Express::before {
+    width: 80%;
+}
+
+.skills-content .right .MongoDB::before {
+    width: 75%;
+}
+
 
 /* teams section styling */
 
