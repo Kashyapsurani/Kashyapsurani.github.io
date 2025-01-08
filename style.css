@@ -855,6 +855,32 @@ footer span a:hover {
         width: 100%;
         margin-bottom: 35px;
     }
+
+    .home .max-width {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .home .image {
+        height: 350px;
+        display: flex;
+        width: 350px;
+        border-radius: 100%;
+        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+        background: linear-gradient(to right, #ff6a00, #ee0979);
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .home .image img {
+        border-radius: 100%;
+        width: 340px;
+        height: 340px;
+    }
 }
 
 @media (max-width: 690px) {
@@ -913,6 +939,32 @@ footer span a:hover {
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+
+    .home .max-width {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .home .image {
+        height: 300px;
+        display: flex;
+        width: 305px;
+        border-radius: 100%;
+        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+        background: linear-gradient(to right, #ff6a00, #ee0979);
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .home .image img {
+        border-radius: 100%;
+        width: 290px;
+        height: 290px;
     }
 }
 
