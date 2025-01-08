@@ -18,33 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="./img/123.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        .columnleft,
-        .columnright {
-            opacity: 0;
-            /* Initially hidden */
-            transform: translateX(-100%);
-            /* Column left starts from left side */
-            transition: opacity 1s, transform 1s;
-        }
 
-        .columnright {
-            transform: translateX(100%);
-            /* Column right starts from right side */
-        }
-
-        .columnleft.visible-left {
-            opacity: 1;
-            transform: translateX(0);
-            /* When visible, move to original position */
-        }
-
-        .columnright.visible-right {
-            opacity: 1;
-            transform: translateX(0);
-            /* When visible, move to original position */
-        }
-    </style>
 </head>
 
 <body>
@@ -503,6 +477,7 @@
             });
         });
 
+        
 
 
     </script>
