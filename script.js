@@ -97,5 +97,13 @@ $(document).ready(function(){
         
         
     });
+
+
+
 });
 
+// Function to trigger animation on elements when they come into view
+
+document.querySelector(
+  "footer span"
+).innerHTML += ` ${new Date().getFullYear()}`;

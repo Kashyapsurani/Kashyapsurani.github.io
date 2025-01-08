@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Kashyap</title>
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Link to your custom CSS (optional) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Boxicons for icons (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <style>
+        /* Add your custom styles here */
+        .about {
+            padding: 100px 0;
+        }
+
+        .max-width {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .column img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .text {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        a i {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title" data-aos="fade-up" data-aos-duration="1000">About me</h2>
+            <div class="about-content">
+                <div class="column left" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200">
+                    <img src="./img/my.jpeg" alt="Kashyap's Photo" width="100%">
+                </div>
+                <div class="column right">
+                    <div class="text" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200">
+                        I'm Kashyap and I'm a <span class="typing-2"></span>
+                    </div>
+                    <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                        I'm Kashyap Surani, a dedicated Full Stack Web Developer with expertise in HTML, CSS,
+                        JavaScript,
+                        Bootstrap, jQuery, React.js, Node.js, and Express.js. Passionate about crafting seamless digital
+                        experiences, I thrive on mastering new technologies and pushing boundaries in web development.
+                        With a keen eye for design and a knack for problem-solving, I specialize in building responsive,
+                        user-friendly applications that exceed expectations. Beyond coding, I enjoy staying updated on
+                        tech trends, seeking outdoor adventures, and connecting with like-minded individuals. Let's
+                        collaborate and turn ideas into impactful web solutions!
+                    </p>
+                    <a href="./img/Resume.pdf" target="_blank" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-delay="400">
+                        Resume
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true, // Ensures the animation happens only once when scrolling into view
+            offset: 120, // Adjusts how early the animation is triggered (in px)
+        });
+    </script>
+
+</body>
+
+</html>
