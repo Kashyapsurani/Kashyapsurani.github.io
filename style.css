@@ -141,6 +141,7 @@ section .title::after {
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
     background-color: #111;
+    
 }
 
 .navbar.sticky {
@@ -801,6 +802,7 @@ footer span a:hover {
 
     .navbar .menu li {
         display: block;
+        margin-left: 20px;
     }
 
     .navbar .menu li a {
