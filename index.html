@@ -18,24 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="./img/123.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        .columnleft {
-            height: 100vh;
 
-            transition: opacity 1s, transform 1s;
-            opacity: 0;
-            transform: translateX(100%);
-        }
-
-        .columnleft:nth-child(even) {
-            transform: translateX(-100%);
-        }
-
-        .columnleft.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    </style>
 </head>
 
 <body>
@@ -92,9 +75,9 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left columnleft">
-                    <img src="./img/my.jpeg" alt="" width="100%">
+                    <img src="./img/my.jpeg" alt="" width="100%" height="100%">
                 </div>
-                <div class="column right columnleft">
+                <div class="column right columnright">
                     <div class="text">I'm Kashyap and I'm a <span class="typing-2"></span></div>
                     <p>I'm Kashyap Surani, a dedicated Full Stack Web Developer with expertise in HTML, CSS, JavaScript,
                         Bootstrap, jQuery, React.js, Node.js, and Express.js. Passionate about crafting seamless digital
@@ -112,73 +95,68 @@
     </section>
 
     <!-- services section start -->
-    <section class="services" id="Tech Stack">
-        <div class="max-width">
-            <h2 class="title">💻 Tech Stack</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-html5'></i>
-                        <div class="text">HTML</div>
-                    </div>
+<section class="services" id="Tech Stack">
+    <div class="max-width">
+        <h2 class="title">💻 Tech Stack</h2>
+        <div class="serv-content">
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-html5'></i>
+                    <div class="text">HTML</div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-css3'></i>
-                        <div class="text">CSS</div>
-
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-css3'></i>
+                    <div class="text">CSS</div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-javascript'></i>
-                        <div class="text">Javascript</div>
-
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-javascript'></i>
+                    <div class="text">Javascript</div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-bootstrap'></i>
-                        <div class="text">Bootstrap </div>
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-bootstrap'></i>
+                    <div class="text">Bootstrap</div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-bootstrap'></i>
-                        <div class="text">Jquery </div>
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-jquery'></i>
+                    <div class="text">Jquery</div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-mongodb'></i>
-                        <div class="text">Mongo DB</div>
-
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-mongodb'></i>
+                    <div class="text">Mongo DB</div>
                 </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-nodejs'></i>
-                        <div class="text">Node js </div>
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-nodejs'></i>
+                    <div class="text">Node js</div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-react'></i>
-                        <div class="text">React js </div>
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-react'></i>
+                    <div class="text">React js</div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class='bx bxl-c-plus-plus'></i>
-                        <div class="text">C++ </div>
-                    </div>
+            </div>
+            <div class="card floating-icon">
+                <div class="box">
+                    <i class='bx bxl-c-plus-plus'></i>
+                    <div class="text">C++</div>
                 </div>
-
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- skills section start -->
     <section class="skills" id="skills">
@@ -465,20 +443,67 @@
 
 
     <script>
-        document.addEventListener('scroll', function () {
-            const columnleft = document.querySelectorAll('.columnleft');
-            const triggerBottom = window.innerHeight / 5 * 4;
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add scroll event listener
+            document.addEventListener('scroll', function () {
+                const columnleft = document.querySelectorAll('.columnleft');
+                const columnright = document.querySelectorAll('.columnright');
+                const triggerBottom = window.innerHeight / 5 * 4; // Define the trigger position for the animation
 
-            columnleft.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
+                // For columnleft
+                columnleft.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible-left'); // Add visible-left to trigger animation
+                    } else {
+                        section.classList.remove('visible-left'); // Remove visible-left if not in viewport
+                    }
+                });
 
-                if (sectionTop < triggerBottom) {
-                    section.classList.add('visible');
-                } else {
-                    section.classList.remove('visible');
-                }
+                // For columnright
+                columnright.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible-right'); // Add visible-right to trigger animation
+                    } else {
+                        section.classList.remove('visible-right'); // Remove visible-right if not in viewport
+                    }
+                });
             });
         });
+
+        // Function to check if an element is in the viewport
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Function to trigger animation on scroll
+            function triggerFloatingAnimation() {
+                const cards = document.querySelectorAll('.card');
+                const servicesSection = document.getElementById('Tech Stack');
+
+                // If the services section is in the viewport, add the floating class to the cards
+                if (isElementInViewport(servicesSection)) {
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('floating');
+                        }, index * 200); // Stagger animation by index
+                    });
+                }
+            }
+
+            // Listen for the scroll event to trigger the animation
+            window.addEventListener('scroll', triggerFloatingAnimation);
+
+            // Run the function once on page load in case the section is already in view
+            window.addEventListener('load', triggerFloatingAnimation);
+
 
 
     </script>
