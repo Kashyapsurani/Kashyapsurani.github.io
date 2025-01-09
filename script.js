@@ -252,8 +252,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting) {
           anime({
             targets: entry.target,
-            scale: [0.0, 1], // Scale up effect
-            opacity: [0.0, 1],
+            scale: [0.9, 1], // Scale up effect
+            opacity: [0.2, 1],
             duration: 800,
             easing: "easeOutExpo",
           });
