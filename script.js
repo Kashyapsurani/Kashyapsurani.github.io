@@ -211,7 +211,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     once: false, // Set this to 'false' to repeat animations when they come into view again
     offset: 200, // The distance from the top of the viewport at which the animation should trigger
     delay: 100, // Default delay before the animation starts
-    disable: "mobile", // Disable AOS on mobile devices (optional)
+    disable: false, // Enable animations on mobile devices
   });
 
   // Debugging log to confirm AOS initialization
@@ -230,6 +230,7 @@ window.addEventListener("scroll", function () {
   // Refresh AOS animations manually on scroll
   AOS.refresh();
 });
+
 
 // swiper
 
