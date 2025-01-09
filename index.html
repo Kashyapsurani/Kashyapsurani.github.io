@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="./img/123.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -44,29 +45,29 @@
     </nav>
 
     <!-- home section start -->
-    <section class="home" id="home">
-        <div class="max-width ">
-            <div class="home-content animate__animated animate__slideInLeft">
-                <div class="text ">
-                    <div class="text-1 animate__animated  animate__slideInLeft">Hello, My Name Is</div>
-                    <div class="text-2 animate__animated  animate__slideInLeft">Kashyap Surani</div>
-                    <div class="text-3 animate__animated  animate__slideInLeft"><span class="typing"></span></div>
-                    <div class="display-flx animate__animated   animate__slideInLeft">
-                        <a target="_blank" href="https://www.linkedin.com/in/kashyap-surani-1016b2296/"><i
-                                class='bx bxl-linkedin animate__animated  animate__slideInLeft'></i></a>
-                        <a target="_blank" href="mailto:kashyapsurani49@gmail.com"><i
-                                class='bx bxl-gmail animate__animated  animate__slideInLeft'></i></a>
-                        <a target="_blank" href="https://github.com/Kashyapsurani"><i
-                                class='bx bxl-github animate__animated  animate__slideInLeft'></i></a>
-                    </div>
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content animate__animated animate__slideInLeft">
+            <div class="text">
+                <div class="text-1 animate__animated animate__slideInLeft">Hello, My Name Is</div>
+                <div class="text-2 animate__animated animate__slideInLeft">Kashyap Surani</div>
+                <div class="text-3 animate__animated animate__slideInLeft"><span class="typing"></span></div>
+                <div class="display-flx animate__animated animate__slideInLeft">
+                    <a target="_blank" href="https://www.linkedin.com/in/kashyap-surani-1016b2296/"><i
+                            class='bx bxl-linkedin animate__animated animate__slideInLeft'></i></a>
+                    <a target="_blank" href="mailto:kashyapsurani49@gmail.com"><i
+                            class='bx bxl-gmail animate__animated animate__slideInLeft'></i></a>
+                    <a target="_blank" href="https://github.com/Kashyapsurani"><i
+                            class='bx bxl-github animate__animated animate__slideInLeft'></i></a>
                 </div>
-
-            </div>
-            <div class="image animate__animated animate__slideInRight ">
-                <img src="./img/my.jpeg" alt="Kashyap Surani" width="100%" height="100%">
             </div>
         </div>
-    </section>
+        <div class="image animate__animated animate__slideInRight">
+            <img src="./img/my.jpeg" alt="Kashyap Surani" width="100%" height="100%">
+        </div>
+    </div>
+</section>
+
 
 
     <!-- about section start -->
@@ -109,14 +110,12 @@
                     <div class="box">
                         <i class='bx bxl-css3'></i>
                         <div class="text">CSS</div>
-
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class='bx bxl-javascript'></i>
                         <div class="text">Javascript</div>
-
                     </div>
                 </div>
                 <div class="card">
@@ -127,7 +126,7 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class='bx bxl-bootstrap'></i>
+                        <i class='bx bxl-jquery'></i>
                         <div class="text">Jquery </div>
                     </div>
                 </div>
@@ -135,10 +134,8 @@
                     <div class="box">
                         <i class='bx bxl-mongodb'></i>
                         <div class="text">Mongo DB</div>
-
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="box">
                         <i class='bx bxl-nodejs'></i>
@@ -157,93 +154,112 @@
                         <div class="text">C++ </div>
                     </div>
                 </div>
-
             </div>
-        </div>
         </div>
     </section>
 
     <!-- skills section start -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills</div>
-                    <p>I Learn C Language in 2019 Than In 2021-2022 i Learn HTML AND CSS And December-2023 To March-2025
-                        Learn Fullstack
-                        Web-Devlopment In Red and White Multimedia Education- Amreli. Gujrat </p>
-                    <a href="#">Read more</a>
+            <h2 class="title" data-aos="fade-up">My skills</h2>
+            <div class="skills-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="column left" data-aos="fade-right">
+                    <div class="text" data-aos="bounce-in" data-aos-delay="200">My creative skills</div>
+                    <p>I Learn C Language in 2019 Than In 2021-2022 I Learn HTML AND CSS And December-2023 To March-2025
+                        Learn Fullstack Web-Development In Red and White Multimedia Education- Amreli. Gujrat </p>
+                    <a href="#about" id="celebrateButton" class="celebrate-btn" data-aos="fade-up"
+                        data-aos-delay="1000">Read More</a>
                 </div>
                 <div class="column right">
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="500">
                         <div class="info">
                             <span>HTML</span>
                             <span>100%</span>
                         </div>
-                        <div class="line html"></div>
+                        <div class="line html" data-aos="fade-right" data-aos-offset="300"
+                            data-aos-easing="ease-in-sine"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="1000">
                         <div class="info">
                             <span>CSS</span>
                             <span>90%</span>
                         </div>
-                        <div class="line css"></div>
+                        <div class="line css" data-aos="fade-right" data-aos-offset="300"
+                            data-aos-easing="ease-in-sine"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="1500">
                         <div class="info">
                             <span>JavaScript</span>
                             <span>85%</span>
                         </div>
-                        <div class="line js"></div>
+                        <div class="line js" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="2000">
                         <div class="info">
                             <span>Bootstrap</span>
                             <span>95%</span>
                         </div>
-                        <div class="line bootstrap"></div>
+                        <div class="line bootstrap" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"></div>
                     </div>
-
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="2500">
                         <div class="info">
                             <span>jQuery</span>
                             <span>80%</span>
                         </div>
-                        <div class="line jQuery"></div>
+                        <div class="line jQuery" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="3000">
                         <div class="info">
                             <span>React js</span>
                             <span>85%</span>
                         </div>
-                        <div class="line React"></div>
+                        <div class="line React" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="3500">
                         <div class="info">
-                            <span>Node js </span>
+                            <span>Node js</span>
                             <span>75%</span>
                         </div>
-                        <div class="line Node"></div>
+                        <div class="line Node" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="4000">
                         <div class="info">
                             <span>Express js</span>
                             <span>80%</span>
                         </div>
-                        <div class="line express"></div>
+                        <div class="line express" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up" data-aos-delay="4500">
                         <div class="info">
-                            <span>MongoDB </span>
+                            <span>MongoDB</span>
                             <span>75%</span>
                         </div>
-                        <div class="line MongoDB"></div>
+                        <div class="line MongoDB" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
+
+
 
 
 
@@ -447,40 +463,9 @@
     </footer>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Add scroll event listener
-            document.addEventListener('scroll', function () {
-                const columnleft = document.querySelectorAll('.columnleft');
-                const columnright = document.querySelectorAll('.columnright');
-                const triggerBottom = window.innerHeight / 5 * 4; // Define the trigger position for the animation
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-                // For columnleft
-                columnleft.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    if (sectionTop < triggerBottom) {
-                        section.classList.add('visible-left'); // Add visible-left to trigger animation
-                    } else {
-                        section.classList.remove('visible-left'); // Remove visible-left if not in viewport
-                    }
-                });
-
-                // For columnright
-                columnright.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    if (sectionTop < triggerBottom) {
-                        section.classList.add('visible-right'); // Add visible-right to trigger animation
-                    } else {
-                        section.classList.remove('visible-right'); // Remove visible-right if not in viewport
-                    }
-                });
-            });
-        });
-
-        
-
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
