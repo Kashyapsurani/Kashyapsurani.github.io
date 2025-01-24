@@ -557,6 +557,23 @@ function App() {
               navigation={true}
               modules={[Autoplay, Navigation]}
               className="mySwiper"
+              breakpoints={{
+                // When the viewport width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                // When the viewport width is >= 640px
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                // When the viewport width is >= 1024px
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+              }}
             >
               <SwiperSlide>
                 <div className="swiper-slide">
