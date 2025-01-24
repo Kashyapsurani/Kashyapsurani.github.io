@@ -30,6 +30,7 @@ body {
     transform: translateX(-100%);
     /* Column left starts from left side */
     transition: opacity 1s, transform 1s;
+
 }
 
 .columnright {
@@ -221,6 +222,10 @@ section .title::after {
 
 }
 
+.menu.active {
+    transform: translateY(0);
+}
+
 .navbar.sticky {
     padding: 15px 0;
     background: rgb(0, 0, 0);
@@ -357,22 +362,47 @@ section .title::after {
     font-weight: 400;
 }
 
+.box img {
+    width: 50px;
+    height: 50px;
+}
+
 .home .home-content a {
-    display: inline-block;
+    display: inline-flex;
+    /* Use flex for alignment */
     background: rgb(255, 255, 255);
+    /* Default background */
     color: #000000;
+    /* Default text color */
     font-size: 25px;
-    padding: 2px 16px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
+    /* Rounded corners */
     border: 2px solid rgb(255, 255, 255);
+    /* Default border color */
     transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    align-items: center;
+    justify-content: center;
+    padding: 6px 20px;
 }
 
 .home .home-content a:hover {
-    color: rgb(255, 255, 255);
-    background: none;
+    background: transparent;
+    /* Background turns black on hover */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+.home .home-content a:hover img {
+    filter: brightness(0) invert(1);
+    /* Changes icon to white on hover */
+    transition: filter 0.3s ease;
+    /* Smooth filter transition */
+}
+.home .animate__animated {
+    animation: slideInLeft 1s ease;
 }
 
 .home .image {
@@ -384,13 +414,13 @@ section .title::after {
     background: linear-gradient(to right, #ff6a00, #ee0979);
     justify-content: center;
     align-items: center;
+    animation: slideInRight 1s ease;
 }
 
 .home .image img {
     border-radius: 100%;
     width: 400px;
     height: 400px;
-
 }
 
 
@@ -398,6 +428,30 @@ section .title::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* about section styling */
@@ -495,11 +549,21 @@ section .title::after {
     border: 2px solid crimson;
     transition: all 0.3s ease;
     box-shadow: 0 0 8px rgba(238, 9, 121, 0.8), 0 0 15px rgba(255, 106, 0, 0.6);
+    
 }
 
 .services .serv-content .card .box {
     transition: all 0.3s ease;
+
 }
+.services .serv-content .card:hover .box {
+filter: brightness(0) invert(1);
+    /* Changes icon to white on hover */
+    transition: filter 0.3s ease;
+    /* Smooth filter transition */
+}
+
+
 
 .services .serv-content .card i {
     font-size: 50px;
@@ -509,6 +573,7 @@ section .title::after {
 
 .services .serv-content .card:hover i {
     color: #fff;
+    
 }
 
 
