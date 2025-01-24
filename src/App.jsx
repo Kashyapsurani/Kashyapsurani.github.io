@@ -155,9 +155,10 @@ function App() {
     const typedOptions = {
       strings: [
         "Fullstack Developer",
-        "Software Developer",
+        "Fruntend Developer",
+        "Backend Developer",
         "Problem Solver",
-        "AI Enthusiast",
+        "AI Tools",
       ],
       typeSpeed: 100,
       backSpeed: 60,
