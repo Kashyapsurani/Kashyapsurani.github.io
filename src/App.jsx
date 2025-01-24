@@ -24,6 +24,7 @@ import up from './img/up-2-svgrepo-com.svg'
 import gmail from "./img/gmail-svgrepo-com (1).svg"
 import guthub from "./img/github-svgrepo-com.svg"
 import link from "./img/linkedin-svgrepo-com.svg"
+import Resume from "./img/Resume.pdf"
 import { useEffect, useState, useRef } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -236,7 +237,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="./img/Resume.pdf" className="menu-btn" target="_blank">
+              <a href={Resume} className="menu-btn" target="_blank">
                 Resume
               </a>
             </li>
