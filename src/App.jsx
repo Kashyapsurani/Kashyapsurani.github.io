@@ -320,7 +320,7 @@ function App() {
                   justifyContent: "center",
                   width: "auto"
                 }}
-                href="./img/Resume.pdf"
+                href={Resume}
                 target="_blank"
               >
                 Resume
