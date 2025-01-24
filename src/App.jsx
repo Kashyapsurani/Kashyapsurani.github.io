@@ -155,7 +155,7 @@ function App() {
     const typedOptions = {
       strings: [
         "Fullstack Developer",
-        "Fruntend Developer",
+        "Frontend Developer",
         "Backend Developer",
         "Problem Solver",
         "AI Tools",
