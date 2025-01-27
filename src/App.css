@@ -38,6 +38,41 @@ body {
     /* Column right starts from right side */
 }
 
+/* Hover effect for menu links */
+.menu-btn:hover {
+    color: #ff5722;
+    /* Change the text color on hover */
+    transition: color 0.3s ease;
+    /* Smooth transition effect */
+}
+
+/* Optional underline effect */
+.menu-btn:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ff5722;
+    /* Color of the underline */
+    transition: width 0.3s ease;
+}
+
+.menu-btn::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease;
+}
+
+/* Styling for the menu button icons */
+.menu-btn img:hover {
+    filter: brightness(0.8);
+    /* Dim or highlight the icon on hover */
+    transition: filter 0.3s ease;
+}
+
 .columnleft.visible-left {
     opacity: 1;
     transform: translateX(0);
