@@ -15,6 +15,8 @@ import node from "./img/node-16-svgrepo-com.svg";
 import react from "./img/react-16-svgrepo-com.svg";
 import reactNative from "./img/react-svgrepo-com.svg";
 import assminpenal from './img/mypro.png';
+import sirtificet1 from './img/sar1.png';
+import sirtificet2 from './img/sir2.png';
 import firstcry from './img/mypro2.png';
 import jiocinema from './img/Screenshot 2024-04-22 at 3.23.49 PM 1.png';
 import ecom from './img/React-ecom.png'
@@ -186,63 +188,66 @@ function App() {
 
 
   const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef(null);
 
   const handleMenuToggle = () => {
-    setShowMenu(!showMenu); // Toggle the state of showMenu
+    setShowMenu(!showMenu);
   };
 
-  const menuRef = useRef(null);
+  // Close menu on clicking a link
+  const handleCloseMenu = () => {
+    setShowMenu(false);
+  };
+
+  // Close menu on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
       <div className="scroll-up-btn">
-        <img src={up} alt="" width={25} height={40} name='up-arrow-alt' />
+        <img src={up} alt="" width={'100%'} height={'100%'} className='Up' name='up-arrow-alt' />
       </div>
       <nav className="navbar animate__animated animate__slideInDown">
         <div className="max-width">
           <div className="logo">
             <a href="#">Kashyap</a>
           </div>
-          <ul
-            className={`menu ${showMenu ? 'active' : ''}`}
-            ref={menuRef}
-          >
-            <li>
-              <a href="#home" className="menu-btn ">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="menu-btn">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#Tech Stack" className="menu-btn">
-                Tech Stack
-              </a>
-            </li>
-            <li>
-              <a href="#skills" className="menu-btn">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="#teams" className="menu-btn">
-                My Project
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="menu-btn">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href={Resume} className="menu-btn" target="_blank">
-                Resume
-              </a>
-            </li>
+
+          {/* Menu Items */}
+          <ul className={`menu ${showMenu ? "active" : ""}`} ref={menuRef}>
+            {[
+              { name: "Home", href: "#home" },
+              { name: "About", href: "#about" },
+              { name: "Tech Stack", href: "#Tech Stack" },
+              { name: "Skills", href: "#skills" },
+              { name: "My Project", href: "#teams" },
+              { name: "Contact", href: "#contact" },
+              { name: "Resume", href: Resume, external: true },
+            ].map((item, index) => (
+              <li key={index}>
+                <a
+                  href={item.href}
+                  className="menu-btn"
+                  onClick={handleCloseMenu}
+                  target={item.external ? "_blank" : "_self"}
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
           </ul>
+
+          {/* Hamburger Menu Button */}
           <div className="menu-btn" onClick={handleMenuToggle}>
             {showMenu ? (
               <img src={closeIcon} alt="Close" width={30} height={30} />
@@ -752,6 +757,62 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section id='cartificet' className='cartificet'>
+        <h2 className="title">My Certificate 🔖</h2>
+        <Swiper
+          slidesPerView={1}
+          centeredSlides={true}
+          autoplay={{
+            delay: 4500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          loop={true}
+          navigation={true}
+          modules={[Autoplay, Navigation]}
+          className="mySwipers"
+        >
+          <SwiperSlide>
+            <div className="swiper-slide">
+              <div className="cards">
+                <div className="boxs swiper-slides">
+                  <img className="sirtificet1" src={sirtificet1} width={'100%'} height={'100%'} alt="" />
+                  <div className="text">Frontend Developer Certificate</div>
+                  <br />
+                  <p></p>
+                  <ul>
+                    <li>For Participate in the " CodeCraft & Designfussen 2024, Amreli "</li>
+                  </ul>
+                  <p />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="swiper-slides">
+              <div className="cards">
+                <div className="boxs swiper-slides">
+                  <img className="sirtificet2" src={sirtificet2} width={'100%'} height={'100%'} alt="" />
+                  <div className="text">C CERTIFICATE</div>
+                  <br />
+                  <p></p>
+                  <ul>
+                    <li>State Level Skill Competition TechWar 2023</li>
+                  </ul>
+                  <p />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+
+
+        </Swiper>
+      </section>
+
       {/* contact section start */}
       <section className="contact" id="contact">
         <div className="max-width">
